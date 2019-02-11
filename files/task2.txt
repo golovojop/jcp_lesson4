@@ -1,0 +1,1 @@
+2019-02-08 EIGRP-IPv4 14: Neighbor 10.77.31.249 (Vlan501) is blocked: not on common subnet (10.77.63.249/30)
