@@ -1,0 +1,1 @@
+A SequenceInputStream represents the logical concatenation

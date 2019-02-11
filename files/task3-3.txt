@@ -1,0 +1,1 @@
+of input streams and reads from the first one until end of file is reached,
