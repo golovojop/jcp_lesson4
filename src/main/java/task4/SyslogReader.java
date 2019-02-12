@@ -14,7 +14,7 @@ public class SyslogReader {
         // Буфер чтения
         byte[] buffer = new byte[PAGE];
 
-        try (FileInputStream is = new FileInputStream("files/syslog.txt")){
+        try (FileInputStream is = new FileInputStream("files/big_file.txt")){
 
             long t = System.currentTimeMillis();
             int n = 0;

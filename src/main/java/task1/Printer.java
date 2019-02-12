@@ -1,6 +1,6 @@
 package task1;
 
-import static task1.MyThread.THREADS;
+import static task1.StartMain.THREADS;
 
 public class Printer {
     private static int nextId = 1;

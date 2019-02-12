@@ -1,21 +1,39 @@
 package task1;
 
+import java.util.ArrayList;
+
 public class StartMain {
+
+    public static final int THREADS = 3;
+
     public static void main(String[] args) throws InterruptedException {
-
         Printer p = new Printer();
+        char ch = 'A';
 
-        MyThread threadA = new MyThread(1, p, "A");
-        MyThread threadB = new MyThread(2, p, "B");
-        MyThread threadC = new MyThread(3, p, "C");
+        ArrayList<Thread> al = new ArrayList<>();
 
-        threadA.start();
-        threadB.start();
-        threadC.start();
+        for(int i = 0; i < THREADS; i++) {
+            al.add(new MyThread((i + 1), p, ch++));
+        }
 
-        threadA.join();
-        threadB.join();
-        threadC.join();
+        al.forEach(t -> t.start());
+        al.forEach(t -> {
+            try {
+                t.join();
+            } catch (InterruptedException e) {e.printStackTrace();}
+        });
+
+//        MyThread threadA = new MyThread(1, p, ch++);
+//        MyThread threadB = new MyThread(2, p, ch++);
+//        MyThread threadC = new MyThread(3, p, ch++);
+//
+//        threadA.start();
+//        threadB.start();
+//        threadC.start();
+//
+//        threadA.join();
+//        threadB.join();
+//        threadC.join();
 
     }
 }

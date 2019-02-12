@@ -1,22 +1,21 @@
 package task1;
 
 public class MyThread extends  Thread {
-    public static final int THREADS = 3;
 
-    private String message;
     private Printer printer;
+    private char ch;
     private int id;
 
-    public MyThread(int id , Printer printer, String message) {
-        this.message = message;
+    public MyThread(int id , Printer printer, char ch) {
         this.printer = printer;
+        this.ch = ch;
         this.id = id;
     }
 
     @Override
     public void run() {
         for(int i = 0; i < 5; i++){
-            printer.print(id, message);
+            printer.print(id, Character.toString(ch));
         }
     }
 }
