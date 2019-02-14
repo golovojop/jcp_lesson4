@@ -22,18 +22,5 @@ public class StartMain {
                 t.join();
             } catch (InterruptedException e) {e.printStackTrace();}
         });
-
-//        MyThread threadA = new MyThread(1, p, ch++);
-//        MyThread threadB = new MyThread(2, p, ch++);
-//        MyThread threadC = new MyThread(3, p, ch++);
-//
-//        threadA.start();
-//        threadB.start();
-//        threadC.start();
-//
-//        threadA.join();
-//        threadB.join();
-//        threadC.join();
-
     }
 }
